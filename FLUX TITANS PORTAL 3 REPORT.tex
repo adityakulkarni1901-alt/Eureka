@@ -1,0 +1,503 @@
+
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{enumitem}
+
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+
+% Innovative styling: Modern section headers
+\titleformat{\section}[hang]{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[hang]{\large\bfseries}{\thesubsection}{1em}{}
+
+% Custom bullet points for benefits
+\setlist[itemize]{label=\textbullet}
+
+% Header and footer for professionalism
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\textit{From Waste to Wellbeing: Biomass and the Food-Water-Energy Nexus}}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+% ----------------------------------------
+% CONTENT LISTS AND ABBREVIATIONS SECTION
+% ----------------------------------------
+
+\clearpage
+\pagenumbering{arabic}  % Use normal numbering throughout
+
+% ---------- TABLE OF CONTENTS ----------
+\renewcommand{\contentsname}{\Large\bfseries Table of Contents}
+\tableofcontents
+\clearpage
+
+% ---------- LIST OF FIGURES ----------
+\renewcommand{\listfigurename}{\Large\bfseries List of Figures}
+\addcontentsline{toc}{section}{List of Figures}
+\listoffigures
+\clearpage
+
+% ---------- LIST OF TABLES ----------
+\renewcommand{\listtablename}{\Large\bfseries List of Tables}
+\addcontentsline{toc}{section}{List of Tables}
+\listoftables
+\clearpage
+
+% ---------- ABBREVIATIONS ----------
+\section*{\Large\bfseries Abbreviations}
+\addcontentsline{toc}{section}{Abbreviations}
+
+\vspace{0.8em}
+\begin{center}
+\renewcommand{\arraystretch}{1.3} % line spacing inside the table
+\setlength{\tabcolsep}{12pt}      % horizontal padding
+\begin{tabular}{@{}p{3cm}p{10cm}@{}}
+\toprule
+\textbf{Abbreviation} & \textbf{Full Form / Description} \\
+\midrule
+LPG & Liquefied Petroleum Gas \\
+AD & Anaerobic Digestion \\
+PPM & Parts Per Million \\
+MJ/m$^3$ & Megajoules per Cubic Meter \\
+C/N & Carbon-to-Nitrogen Ratio \\
+VFAs & Volatile Fatty Acids \\
+pH & Potential of Hydrogen \\
+gVS & Grams of Volatile Solids \\
+TS & Total Solids \\
+OLR & Organic Loading Rate \\
+HRT & Hydraulic Retention Time \\
+CHP & Combined Heat and Power \\
+GWP & Global Warming Potential \\
+OFMSW & Organic Fraction of Municipal Solid Waste \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\clearpage
+\pagenumbering{arabic}  % Switch to normal numbering for main content
+% No title page since excluding page 1
+\section{Problem Statement}
+Restaurant waste can produce biogas, but it often lacks the right nutrient balance, making the process unstable and less efficient. By adding urine as a natural nitrogen source and using simple pretreatment to break down food waste, we can support microbial growth, improve digestion, and boost methane production. This offers a cleaner and more sustainable way to turn everyday waste into renewable energy.
+\section{Abstract}
+
+This study looks at a simple yet effective way to boost biogas production from restaurant waste by focusing on two key strategies:balancing nutrients and making the waste easier to digest.Restaurant waste usually contains too much carbon and not enough nitrogen,which makes the digestion process unstable and lowers methane output.To fix this,extra nitrogen was added using urea,ammonium chloride and even urine,a natural source of nitrogen and minerals.Urine worked especially well because it provides nitrogen gradually and also supplies useful salts that help microbes grow in a healthy and balanced way.Along with this,the waste was given a mild acid pretreatment,which helped break down tough food particles and made them easier for microbes to digest.When combined,these two steps made the digestion process smoother,more stable,and much more productive, leading to higher methane generation.Overall,this approach shows how everyday waste materials like leftover food and even urine can be turned into a clean,renewable source of energy while also reducing environmental problems caused by waste.
+
+\section{Introduction}
+
+In this modern world,the demand for food,water,energy,etc.\ is increasing with increasing population and needs.But managing food–water–energy is a very big challenge.
+
+So, one of the renewable energy options is biogas.It basically generates clean energy and helps with waste management.
+
+So the question arises:what is biogas?\newline
+It is basically a gaseous fuel,especially methane,produced by the fermentation of organic matter.Biogas seems a promising source of energy,which causes very less pollution.
+
+The production of biogas can be done through many methods but the one we are covering here in particular is biogas production from restaurant waste.The main reason behind choosing restaurant waste is that it is available in high amounts daily and has high levels of organic matter that are suitable for anaerobic digestion.However,some natural nutrients like carbon and nitrogen are not balanced which makes biogas production inefficient and unstable.To address these issues,we need new approaches to boost microbial activity and stabilize the digestion process.
+
+This project,titled “From Waste to Wellbeing:Biomass and the Food,Water,Energy Nexus” focuses on simple,cost effective methods to increase biogas production from restaurant waste. The study looks at using urine as a natural nitrogen source and applying mild acid pretreatment to increase the yield and production of biogas.Together,these strategies aim to turn common waste materials like kitchen waste and urine into a dependable source of renewable energy while also promoting environmental sustainability and circular economy principles.
+
+\section{Introduction to Biogas}
+
+“Decentralized energy systems like biogas are not just technologies,they are instruments of social and economic transformation.”
+
+ — Dr.\ A.K.N.\ Reddy
+
+Biogas is one of the most promising renewable energy sources that turns organic waste into useful fuel. It is produced through a process called anaerobic digestion in which microorganisms break down organic materials such as food waste, animal manure, and agricultural residues in the absence of oxygen.The main components of biogas are methane (CH$_4$) and carbon dioxide (CO$_2$), with small amounts of hydrogen sulfide and other gases also formed.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{image.png}
+ \caption{Anaerobic digestion process converting organic waste into biogas and digestate.}
+    \label{fig:placeholder}
+\end{figure} \\
+Methane, being a combustible gas, is the primary energy carrier in biogas and can be used as a clean substitute for conventional fuels. Biogas technology provides a sustainable solution to two major global issues energy scarcity and waste management.Instead of letting organic waste decompose in open air and release harmful greenhouse gases, biogas plants capture the gas and use it for cooking, heating, lighting, and electricity generation.The leftover material, known as digestate, is a nutrient rich organic fertilizer that can improve soil health and support sustainable agriculture.
+
+Beyond energy production, biogas contributes significantly to environmental protection. It reduces the emission of methane into the atmosphere, helps control foul odors, and decreases the spread of pathogens.Moreover,it supports rural development by providing energy independence and additional income sources for farmers through small scale biogas units.
+
+So, biogas is basically nature’s way of recycling waste into something valuable.
+
+\begin{table}[h]
+\centering
+\caption{Composition of Biogas}
+\begin{tabular}{lr}
+\toprule
+Components & Concentration (by Volume) \\
+\midrule
+Methane (CH$_4$) & 55-60\% \\
+Carbon Dioxide (CO$_2$) & 35-40\% \\
+Water (H$_2$O) & 2-7\% \\
+Hydrogen Sulfide (H$_2$S) & 20-20,000 PPM (2\%) \\
+Ammonia (NH$_3$) & 0-0.05\% \\
+Nitrogen (N$_2$) & 0-2\% \\
+Oxygen (O$_2$) & 0-2\% \\
+Hydrogen (H$_2$) & 0-1\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Characteristics of Biogas}
+
+\begin{itemize}
+\item The composition of biogas primarily depends on the type of feedstock used. Biogas is approximately 20\% lighter than air and possesses an ignition temperature ranging from 650°C to 750°C. It is an odorless and colorless gas that burns with a blue flame, similar to Liquefied Petroleum Gas (LPG). The calorific value of biogas is approximately 20 MJ/m³, and it typically exhibits a combustion efficiency of around 60\% when utilized in conventional biogas stoves.
+
+\item Biogas serves as a versatile fuel substitute for firewood,cow dung,petrol,LPG,diesel,and electricity,depending on the application,resource availability,and local conditions.
+
+\item The anaerobic digestion (AD) process in biogas digesters produces a residual organic slurry that is rich in nutrients and superior to conventional organic fertilizers.This by-product contains nitrogen in the form of ammonia, enhancing its value as manure.Additionally,anaerobic digesters act as effective waste management systems,particularly for human and animal wastes,thereby reducing environmental contamination and the spread of pathogens.Biogas technology is especially beneficial in treating agricultural residues, animal excreta,and kitchen waste.
+\end{itemize}
+\newpage
+\subsection{Factors Affecting Biogas Production}
+
+\begin{enumerate}
+\item Variation in gas volume as a function of temperature and pressure.
+\item Variation in calorific value with changes in temperature, pressure, and water vapor content.
+\item Variation in water vapor concentration as a function of temperature and pressure.
+\end{enumerate}
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=0.98\linewidth]{60.png}
+    \caption{Factors Affecting Biogas Production}
+    \label{fig:placeholder}
+\end{figure}\\
+\newpage
+\section{Benefits of Biogas Technology}
+
+\begin{itemize}
+\item Biogas technology generates renewable energy from organic waste,reducing reliance on fossil fuels for power and heat generation.
+
+\item The process efficiently transforms agricultural and organic waste into nutrient-rich digestate,which serves as a high-quality substitute for chemical fertilizers,boosting soil health and crop productivity.
+
+\item The process of anaerobic digestion in biogas plants destroys dangerous pathogens found in organic waste,making communities cleaner and reducing the risk of disease linked to poor sanitation.
+
+\item By capturing methane emissions that would otherwise be released from landfills or uncovered waste,biogas systems greatly reduce greenhouse gas emissions and environmental pollution.
+
+\item Biogas facilities help prevent soil and water contamination by diverting waste from landfills and enabling better waste management practices.
+
+\item The cost effective and locally adaptable nature of biogas technology supports rural economies by creating jobs,new revenue streams,and reducing household energy and fertilizer expenses.
+\end{itemize}
+
+\section{The Science Behind Biogas Production}
+
+Organic matter, derived from living and decomposed organisms,primarily consists of carbon (C) combined with hydrogen (H),oxygen (O),nitrogen (N),and sulphur (S) to form compounds such as carbohydrates,proteins,and lipids.Microorganisms decompose these materials through biological digestion,converting complex organic compounds into simpler products(like methane).
+
+Two main types of digestion occur:aerobic and anaerobic.Aerobic digestion,in the presence of oxygen,oxidizes organic matter to carbon dioxide (CO$_2$),contributing to greenhouse gas emissions.In contrast,anaerobic digestion proceeds without oxygen and produces biogas,a mixture mainly of methane (CH$_4$) and CO$_2$.The methane generated,with typically high calorific value,offers a renewable and environmentally sustainable alternative to fossil fuels.Consequently,anaerobic digestion serves as an efficient method for both organic waste management and clean energy production.
+\newpage
+\section{Anaerobic Digestion}
+
+Anaerobic digestion, also known as biomethanization,is a natural biological process that occurs in the absence of oxygen.During this process,microorganisms decompose complex organic materials into simpler substances through a series of biochemical reactions.The end products are biogas,which is rich in energy,and nutrient-rich effluent,which can be used as a biofertilizer.
+
+This process involves three major microbiological stages: hydrolysis, acidification,and methanogenesis.Each stage is carried out by different groups of microorganisms that work together to convert organic waste into methane and carbon dioxide.
+
+\subsection{ Hydrolysis}
+
+Hydrolysis is the process where bacteria use enzymes like cellulase,amylase, protease,and lipase to break down complex materials such as carbohydrates, proteins,and fats into simpler,soluble compounds.It'slike nature’s way of predigesting food turning large molecules into smaller ones that bacteria can easily absorb and use.
+
+\subsection{Acidification (Acidogenesis)}
+
+In the next stage,acid-producing bacteria convert the products of hydrolysis into simpler organic compounds such as acetic acid,hydrogen (H$_2$),and carbon dioxide (CO$_2$).These bacteria are anaerobic and thrive in slightly acidic conditions.
+
+They also produce other by-products like alcohols,organic acids,amino acids,hydrogen sulphide (H$_2$S),and small amounts of methane.Chemically,this stage is partly endothermic.That means it requires some energy input.The activity of acid producing bacteria helps create a favourable environment for methane producing microorganisms.
+
+\subsection{Methanogenesis (Methane Formation)}
+
+The final stage,methanogenesis,is carried out by methanogenic archaea,a specialized group of microorganisms distinct from typical bacteria.These microbes use hydrogen,carbon dioxide,and acetic acid to produce methane (CH$_4$) and carbon dioxide (CO$_2$).
+
+Methanogens are strictly anaerobic and highly sensitive to environmental changes such as pH,temperature,and toxic compounds.They are commonly found in natural anaerobic environments like wetlands,marine sediments,and marshes places where methane formation naturally occurs.
+\newpage
+\subsection{Symbiosis Of Bacteria }
+\begin{itemize}
+\item Methane producing and acid producing bacteria work together in a symbiotic way,meaning they help each other survive.
+\item Acid producing bacteria break down complex materials and create simple compounds,which also make the surroundings anaerobic (without oxygen).So it is  perfect for methane bacteria to live in.
+\item On the other hand,Methane producing bacteria then use the by-products made by acid producing bacteria to produce methane gas.
+If methane bacteria didn’t use these by-products,they would build up and become toxic for the acid producing bacteria.
+\item
+So,by this way both work together as no single bacteria can do the whole process alone.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{67.png}
+    \caption{ Flow chart of an aerobic digestion}
+    \label{fig:placeholder}
+\end{figure}\\
+\newpage
+
+
+\titleformat{\section}{\large\bfseries}{\thesection.}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{1em}{}
+
+\begin{document}
+
+\section{Restaurant Waste Challenge}
+Restaurant and kitchen waste presents both an opportunity and a challenge for biogas production. On the positive side, food waste contains high levels of organic matter---typically 85--96\% volatile solids that can be converted to biogas. However, restaurant waste suffers from a critical imbalance: it contains too much carbon relative to nitrogen.
+
+\section{The Science Behind the Problem}
+
+\subsection{The Carbon-to-Nitrogen Ratio Dilemma}
+Microorganisms require a specific nutrient balance to optimize the efficiency of anaerobic digestion. Nitrogen is needed to form proteins and nucleic acids, while carbon is primarily used as an energy source. Optimal microbial growth with respect to the C:N ratio occurs between 20:1 and 30:1. In the case of restaurant waste, the C:N ratio is about 38.2:1, meaning the restaurant waste exceeds the optimal range of 20:1 to 30:1. 
+
+Such an imbalance leads to several complications:
+\begin{itemize}[noitemsep]
+    \item \textbf{Nitrogen starvation:} Without sufficient nitrogen, microbial growth and reproduction are hindered.
+    \item \textbf{Excessive VFA accumulation:} High concentrations of volatile fatty acids remain unconverted into methane.
+    \item \textbf{Process inhibition:} Excessive acid production lowers the pH of the digester, inhibiting methanogenic archaea and reducing overall methane yield.
+\end{itemize}
+
+\subsection{Microorganisms in Biogas Production}
+The anaerobic digestion process depends on a complex community of microorganisms, each playing a specific role. The most important group for final methane production is the methanogenic archaea, microorganisms that are extremely sensitive to environmental conditions.
+
+These methanogens fall into two main categories:
+\begin{enumerate}[noitemsep]
+    \item \textbf{Aceticlastic methanogens} --- Convert acetic acid directly to methane.
+    \item \textbf{Hydrogenotrophic methanogens} --- Use hydrogen and CO$_2$ to produce methane.
+\end{enumerate}
+
+Research shows that hydrogenotrophic methanogens often dominate in biogas reactors, accounting for 60--99\% of the archaeal community. However, their abundance and activity are directly affected by nutrient availability and environmental stability.
+\newpage
+\section{Solution}
+
+\subsection{Strategy 1: Nutrient Balancing with Urine}
+The primary breakthrough involves utilizing human urine as a dual-purpose natural nitrogen source and buffering agent to overcome the inherent nutrient imbalances of restaurant waste. Urine's unique properties make it exceptionally well-suited for enhancing biogas production:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Natural Nitrogen Source:} Fresh human urine contains a high concentration of nitrogen (approximately 15--19 g/L), primarily in the form of urea and ammonia compounds. This directly addresses the nitrogen deficiency in high-carbon restaurant waste, bringing the C/N ratio closer to the optimal 20--30:1 range required for healthy microbial metabolism.
+    \item \textbf{Gradual Release:} Unlike chemical fertilizers that release nitrogen rapidly and can harm microbes, urine releases nitrogen slowly, providing a steady food source that keeps the digestion process stable.
+    \item \textbf{Natural Buffer:} Urine contains minerals that help control acidity. As food waste breaks down, harmful acids can form, lowering pH. Urine acts as a buffer to neutralize these acids, maintaining a stable environment for microbial activity.
+    \item \textbf{pH Optimization:} Fresh urine typically has a pH between 5.3 and 6.2, which introduces mild initial acidity that aids in the hydrolysis of complex organic matter, making it more accessible for microbial degradation.
+\end{itemize}
+
+\subsection{Strategy 2: Feedstock Pretreatment}
+The second part of the research focuses on pre-treating the food waste to make it easier for microbes to digest. Restaurant waste, especially from vegetables, contains tough plant fibers that are hard for microbes to break down, slowing the digestion process and reducing biogas yield. 
+
+To address this, the waste is first treated to break apart these structures, making the organic matter inside more accessible to microbes.
+
+\subsection{Mild Acid Pretreatment}
+By adding a strong acid, the food waste mixture becomes acidic. This process, called mild acid treatment, breaks down tough plant fibers by dissolving parts of them and converting them into simple sugars. These sugars are then easier for bacteria to consume during biogas production.
+
+The benefits of this approach include:
+\begin{itemize}[noitemsep]
+    \item \textbf{Structural Disruption:} The acid breaks down plant cell walls, exposing cellulose and hemicellulose fibers.
+    \item \textbf{Increased Surface Area:} The degradation of polymers and reduction in particle size increase the surface area available for microbial attack.
+    \item \textbf{Enhanced Solubility:} A larger fraction of solid organic matter becomes soluble, accelerating hydrolysis---often the rate-limiting step in digestion.
+\end{itemize}
+
+Studies show that this acid treatment can boost biogas production by nearly 50\%, making it both quick and practical at normal temperatures. When combined with nutrient balancing from urine, the process becomes more stable, faster, and highly productive.
+
+\subsection{Physical and Chemical Benefits of Pretreatment}
+The main goal of treating restaurant waste is to break down its tough, fibrous structure, which microbes struggle to digest. Acid treatment brings several synergistic improvements:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Break Down Cell Walls in Plant Matter:} Mild acid pretreatment targets hemicellulose, dissolving the ``glue'' that holds lignocellulosic structures together, thereby exposing energy-rich cellulose fibers.
+    \item \textbf{Increase Surface Area for Microbial Attack:} The breakdown of the rigid matrix increases porosity and surface area, accelerating enzymatic hydrolysis.
+    \item \textbf{Reduce Particle Size:} Acid action and mixing reduce particle size, enhancing contact between microbes and substrate, leading to faster digestion and higher biogas yield.
+    \item \textbf{Solubilize More Organic Matter:} The hydrolysis process converts complex carbohydrates into soluble sugars such as glucose and xylose, providing immediately available food for acidogenic bacteria.
+\end{itemize}
+
+\section{Experimental Results}
+The empirical results validate this combined methodology, demonstrating significant improvements in biogas yield, process stability, and overall efficiency. Integrating nutrient supplementation via urine with feedstock pretreatment enhances the anaerobic digestion of restaurant waste, resulting in a more stable and productive bioprocess.
+
+\subsection{Improvements in Biogas Production}
+The use of human urine as a natural buffer and nitrogen source led to remarkable increases in gas volume:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Biogas Volume Increases:} Reactors using male and female urine as buffers produced an average of 101 $\pm$ 18 mL of biogas per gram of volatile solids (gVS)—1.5 times higher than sodium bicarbonate-buffered systems and 5 times higher than unbuffered controls.
+    \item \textbf{Gender Differences:} Reactors buffered with female urine produced twice as much biogas as those using male urine, indicating potential differences in nutrient composition worth further study.
+    \item \textbf{Peak Production:} Dry anaerobic digestion systems achieved and sustained high peak biogas volumes, confirming this method’s effectiveness for real-world, high-solid waste applications.
+\end{itemize}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{45.png}
+    \caption{Cumulative methane production}
+    \label{fig:placeholder}
+\end{figure}\\
+\subsection{Process Stability Improvements}
+Beyond enhancing volumetric output, the supplementation with urine conferred fundamental stability to the entire digestion process, a critical factor for ensuring long-term operational reliability.
+
+\begin{itemize}[noitemsep]
+    \item \textbf{pH Stabilization:} The reactors buffered with urine consistently maintained a stable pH within the optimal range of 7.8 $\pm$ 0.1. In contrast, the unbuffered control reactors underwent rapid acidification, with the pH decreasing to an inhibitory level of 4.8 $\pm$ 0.4, which resulted in a complete cessation of methanogenic activity.
+
+    \item \textbf{Reduced Acid Accumulation:} Enhanced pH stability is directly attributable to the prevention of inhibitory metabolite accumulation. The total volatile fatty acid (VFA) concentration in the urine-buffered systems was maintained at a non-inhibitory level of 396 mg/L. Conversely, the control reactors exhibited a toxic accumulation of VFAs, reaching 3,109 mg/L. This demonstrates that urine buffering promotes the efficient conversion of these acid intermediates to methane, thereby preventing their accumulation to concentrations that cause process inhibition.
+
+    \item \textbf{Enhanced Microbial Communities:} The stable process environment promoted a more robust microbial community. Quantitative analysis of microbial populations demonstrated that the abundance of essential methanogenic archaea was six-fold higher in the urine-buffered reactors compared to the controls. This provides direct biological evidence correlating the enhanced biogas yield with a larger and more active population of methane-producing microorganisms.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{56.png}
+    \caption{VFA Acid Concentration vs Time}
+    \label{fig:placeholder}
+\end{figure}\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{89.png}
+    \caption{Acetate Concentration vs Time}
+    \label{fig:placeholder}
+\end{figure}\\
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{68.png}
+    \caption{Biomass(Acidogens and Methanogens)}
+    \label{fig:placeholder}
+\end{figure}\\
+
+\subsection{Pretreatment and Co-digestion Synergy}
+The benefits of nutrient balancing were further amplified when combined with feedstock pretreatment and co-digestion strategies.
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Methane Increase from Pretreatment:} Studies comparing various methods showed that applying a mild acid pretreatment alone could increase the final methane production by as much as 48\%. This is achieved by breaking down the complex lignocellulosic structures in the waste, making the organic matter more accessible to microbes. When this pretreatment was combined with the stabilizing effects of urine buffering, the overall improvements were synergistic, leading to even greater yields.
+    
+    \item \textbf{Co-digestion Improvements:} The principle of nutrient balancing was also validated through co-digestion. Mixing restaurant waste with other complementary organic materials, such as 25\% cattle dung, resulted in a 17.3\% increase in biogas generation compared to digesting the food waste alone. Co-digesting with other substrates like chicken manure or rice straw helps naturally optimize the C/N ratio, dilute potential toxins, and provide a broader range of micronutrients, creating a more resilient and productive microbial ecosystem.
+\end{itemize}
+
+\section{Operational Parameters}
+Optimal performance of an anaerobic digestion system is contingent upon the precise regulation of key operational parameters. The scientific literature identifies temperature, total solids concentration, pH, the carbon-to-nitrogen (C/N) ratio, and the organic loading rate as the critical determinants of efficiency and stability in biogas production from restaurant waste.
+
+\subsection{Temperature Requirements}
+Temperature is a critical parameter that directly governs the metabolic kinetics of the microbial consortia. Although anaerobic digestion is viable across a broad thermal range, process efficiency is maximized within specific temperature optima, each presenting distinct operational advantages and drawbacks.
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Psychrophilic Digestion ($<20^\circ$C):} Operation within the psychrophilic range is advantageous due to minimal energy expenditure, as it eliminates the need for external heating. However, microbial metabolic rates are significantly diminished under these conditions. This necessitates prolonged hydraulic retention times (HRT) and larger reactor volumes to achieve a given substrate throughput, rendering it less practical for high-throughput applications.
+
+    \item \textbf{Mesophilic Digestion (30--40$^\circ$C):} The mesophilic range is the most widely adopted operational condition for biogas production worldwide. Typically maintained between 32--37$^\circ$C, this regime offers an optimal balance between strong microbial metabolism, process stability, and moderate energy requirements. The microbial consortia in mesophilic systems exhibit high diversity and resilience to minor changes in temperature or feedstock composition, enhancing overall process reliability. The experimental work referenced was conducted successfully within this range, validating its suitability for the present study.
+
+    \item \textbf{Thermophilic Digestion (50--60$^\circ$C):} Operation within the thermophilic range provides several benefits, including accelerated biochemical reaction kinetics, higher methane productivity, and better pathogen destruction. However, it requires substantial heating energy, and the specialized microbial consortia involved are less diverse and more sensitive to operational disturbances. This increases the risk of instability, particularly due to ammonia-induced toxicity.
+\end{itemize}
+
+The utilization of nitrogen-rich feedstocks, such as urine, significantly elevates the risk of ammonia-induced toxicity at thermophilic temperatures. Consequently, the mesophilic range is favored, as it ensures a stable and efficient bioprocess while avoiding the high energy costs and operational risks of thermophilic systems.
+
+\subsection{Critical Control Parameters}
+Beyond temperature, several other parameters must be carefully controlled to ensure that the digester operates at peak performance.
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Total Solids (TS) Content:} The concentration of solids in the feedstock determines the type of digestion process. For dry anaerobic digestion, a TS content above 15\% is typically required. Restaurant waste, with an average TS content of 24.7\%, is exceptionally well-suited for this efficient digestion method, which uses smaller reactors and produces less liquid effluent.
+
+    \item \textbf{pH Control:} Maintaining a stable pH is critical for robust anaerobic digestion. Methanogenic archaea, the microorganisms responsible for methane biosynthesis, are highly sensitive to acidity and function optimally within a narrow pH range of 6.8--7.2. A pH drop below this threshold, often caused by volatile fatty acid (VFA) accumulation, leads to metabolic inhibition and can halt methanogenesis. Experimental results show that urine’s inherent buffering capacity effectively maintains the pH within this optimal range, preventing acidification-related failures.
+
+    \item \textbf{Carbon-Nitrogen (C/N) Ratio:} A balanced C/N ratio is essential for microbial nutrition. Research confirms that an optimal ratio for co-digesting food waste with other substrates lies between 25:1 and 30:1. This provides sufficient carbon for energy and nitrogen for microbial growth without risking ammonia toxicity. The addition of urine serves as a key strategy for lowering the high C/N ratio of restaurant waste into this ideal window.
+
+    \item \textbf{Organic Loading Rate (OLR):} Regulating OLR is essential for maintaining process stability. Excessive loading can cause acid accumulation and pH decline, inhibiting methanogens. The buffering capacity of urine mitigates these effects, sustaining the pH within the safe operational range (6.8--7.2) and preventing process inhibition.
+\end{itemize}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{4.png}
+    \caption{Optimizing Anaerobic Digestion Process}
+    \label{fig:placeholder}
+\end{figure}\\
+\newpage
+\section{Environmental and Economic Benefits}
+The application of anaerobic digestion to restaurant waste, augmented by urine-mediated nutrient balancing and feedstock pretreatment, presents substantial environmental and economic benefits. This methodology transitions a linear waste disposal model into a circular, value-added framework that aligns with global sustainability objectives.
+
+\subsection{Waste Management and Environmental Advantages}
+\begin{itemize}[noitemsep]
+    \item \textbf{Waste Valorization and Landfill Diversion:} Food waste constitutes a significant fraction of municipal solid waste streams. The diversion of restaurant-derived organic waste from landfill disposal to anaerobic digestion facilities directly reduces the volumetric and mass loading on these sites. This practice not only prolongs the operational lifespan of existing landfills but also mitigates environmental risks such as soil and groundwater contamination from leachate.
+
+    \item \textbf{Greenhouse Gas Emission Reduction:} The anaerobic decomposition of organic matter in landfills results in the fugitive emission of methane (CH$_4$), a potent greenhouse gas with a Global Warming Potential (GWP) approximately 28 times greater than carbon dioxide (CO$_2$) over a 100-year horizon. By contrast, anaerobic digestion captures this biogas within a sealed reactor, enabling its subsequent combustion for energy generation and thus preventing its atmospheric release. This process is considered carbon-neutral, as the CO$_2$ released during combustion is biogenic, equivalent to the atmospheric CO$_2$ fixed by the source biomass. Consequently, it does not contribute to a net increase in atmospheric carbon concentrations.
+
+    \item \textbf{Resource Recovery and Nutrient Cycling:} A major advantage of anaerobic digestion is its ability to recover resources and promote nutrient cycling, which are central to a circular bioeconomy. The process generates two principal co-products: renewable energy (biogas) and a nutrient-rich effluent known as \textit{digestate}. This digestate serves as an effective bio-fertilizer containing essential macronutrients such as nitrogen, phosphorus, and potassium. Empirical studies show that downstream processing of the digestate can recover up to 89\% of phosphorus via precipitation as struvite (magnesium ammonium phosphate), a valuable slow-release fertilizer. By enabling land application of these recovered nutrients, the system reduces dependence on synthetic fertilizers, conserves resources, and enhances soil fertility.
+\end{itemize}
+
+\subsection{Economic Considerations}
+The economic viability of this system is underpinned by its use of low-cost inputs and the creation of multiple value streams from waste.
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Low-Cost and Abundant Inputs:} The primary inputs---restaurant waste and human urine---are typically considered zero-value or even negative-value materials (i.e., they carry disposal costs). Using freely available human urine as a nitrogen source and buffering agent provides a significant economic advantage, eliminating the need for commercial additives such as urea or ammonium chloride. This drastically reduces operational expenditures.
+
+    \item \textbf{Renewable Energy Production:} The biogas produced is a versatile and valuable energy source. With a methane content of 50--70\% and a calorific value of approximately 20--25 MJ/m$^3$, it can be used directly for cooking and heating, or to generate electricity via a Combined Heat and Power (CHP) unit. On-site energy generation can significantly offset or even eliminate energy costs for restaurants or communities, providing a direct economic return.
+
+    \item \textbf{Creation of a Circular Economy:} This technology epitomizes the principles of a circular economy. It establishes a closed-loop system where waste is transformed into valuable products---energy and fertilizer---instead of being discarded. This reduces waste disposal fees, generates revenue or savings from energy production, and produces a marketable fertilizer. By turning waste into assets, the system offers a compelling business model for sustainable waste management, particularly for small and medium-scale enterprises.
+\end{itemize}
+
+\section{Applications and Scalability}
+The efficacy of this enhanced anaerobic digestion strategy, which integrates nutrient augmentation with feedstock pretreatment, extends well beyond restaurant waste. The fundamental principles of the process are inherently adaptable, rendering the technology both flexible and scalable. This allows application across a wide range of organic substrates and facilitates integration into diverse waste management frameworks, from small-scale decentralized units to large industrial biorefineries.
+
+\subsection{Feedstock Flexibility}
+While this research focused on restaurant waste, the challenges of imbalanced C/N ratios, inhibitory compounds, and low digestibility are common across many organic feedstocks. Strategies such as co-digestion, nutrient supplementation with materials like urine, and physical or chemical pretreatment can stabilize and enhance biogas production from various other waste streams.
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Agricultural Residues:} Lignocellulosic materials such as rice straw, wheat straw, and corn stover are abundant but have high C/N ratios and recalcitrant structures. Anaerobic co-digestion with nitrogen-rich substrates like animal manure, poultry litter, or food waste effectively balances nutrients. A pretreatment step further deconstructs the lignocellulosic matrix, enhancing substrate bioavailability and significantly improving methane yields.
+
+    \item \textbf{Municipal Organic Waste:} The organic fraction of municipal solid waste (OFMSW), including household kitchen scraps and yard trimmings, shares compositional similarities with restaurant waste. Co-digestion and nutrient/pH buffering with sources like urine can enhance stability and biogas efficiency in municipal-scale plants.
+
+    \item \textbf{Industrial Organic Waste:} Industries such as food and beverage production generate homogeneous organic byproducts prone to acidification or nutrient imbalances. Co-digesting these streams with municipal sludge or agricultural manure, or supplementing with urine as a buffer and nutrient source, can create a more robust and efficient digestion process.
+
+    \item \textbf{Animal Manures and Sewage Sludge:} These waste streams, rich in nitrogen and moisture, have low C/N ratios that often lead to ammonia accumulation and process inhibition during mono-digestion. Co-digestion with carbon-rich substrates such as restaurant waste or lignocellulosic biomass optimizes the C/N ratio, reduces inhibitor concentrations, and strengthens microbial diversity, leading to improved process stability and biogas productivity.
+\end{itemize}
+
+\section{Results}
+The study confirmed that the combined method of nutrient addition and feedstock pretreatment resulted in significant, measurable improvements in both the efficiency and stability of biogas production. The use of human urine as a source of nitrogen and a pH stabilizer, paired with mild acid pretreatment, led to substantial increases in biogas yield across all tested parameters.
+
+Reactors using a mix of male and female urine produced an average of 101 $\pm$ 18 mL of biogas per gram of volatile solids (gVS), which was 1.5 times higher than systems buffered with sodium bicarbonate and five times higher than controls using only water. Interestingly, reactors buffered with female urine produced twice as much biogas as those using male urine, suggesting nutrient composition differences worth further investigation.
+
+Mild acid pretreatment alone increased methane production by up to 48\%, showing that structural breakdown enhances conversion efficiency. When combined with nutrient balancing from urine, the improvements were synergistic, producing even higher methane yields. Co-digestion with 25\% cattle dung further increased biogas generation by 17.3\% compared to restaurant waste alone.
+
+Urine’s buffering capacity proved vital for maintaining process stability. Reactors with urine maintained pH at 7.8 $\pm$ 0.1, while controls dropped to 4.8 $\pm$ 0.4, halting methane production. Volatile fatty acid concentrations remained low (396 mg/L) in urine-buffered systems but reached toxic levels (3,109 mg/L) in controls. This demonstrates that urine prevents acid buildup and sustains methanogenic activity.
+
+Microbial analysis revealed that methanogenic archaea populations were six times higher in urine-buffered reactors, directly linking increased biogas yields to an expanded and active microbial community. The study further validated that restaurant waste, with an average Total Solids (TS) content of 24.7\%, is well-suited for dry anaerobic digestion---a process that is efficient, requires smaller reactors, and produces less liquid effluent. Optimal performance occurred at 32--37$^\circ$C, balancing microbial activity, stability, and energy efficiency.
+\newpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.15\linewidth]{8.png}
+    \caption{Biogas Production Methods Comparison}
+    \label{fig:placeholder}
+\end{figure}\\
+\section{Conclusion}
+This research provides conclusive scientific proof that adding human urine as a nutrient source and pretreating feedstock effectively converts restaurant waste into a valuable renewable energy source by resolving key technical challenges in anaerobic digestion, such as poor carbon-to-nitrogen ratios and process instability. 
+
+The experiments demonstrated remarkable improvements: using urine as a nutrient source and pH buffer increased biogas production five-fold compared to controls by stabilizing pH and preventing toxic acid buildup. This stability fostered a six-fold increase in the methane-producing microbial population, while mild acid pretreatment alone boosted methane yields by up to 48\%. When both strategies were combined, the effects were synergistic, leading to even greater overall performance.
+
+From an environmental perspective, this approach embodies the principles of a circular economy by diverting organic waste from landfills to produce clean energy and nutrient-rich fertilizer. This not only prevents methane emissions but also reduces dependence on fossil fuels and synthetic fertilizers. 
+
+Economically, the method is highly feasible, relying on free or low-cost waste inputs such as food waste and human urine, thereby reducing operational expenses while generating renewable energy and marketable fertilizer. As a scalable and flexible solution compatible with existing biogas technology, this integrated strategy offers a scientifically validated and practical model for sustainable development—transforming everyday waste into valuable resources for a more circular and sustainable future.
+
+\newpage
+\begin{thebibliography}{99}
+
+\bibitem{Kainthola2019}
+Kainthola, J., Kalamdhad, A. S., \& Goud, V. V. (2019). Optimization of process parameters for accelerated methane yield from anaerobic co-digestion of rice straw and food waste. \textit{Renewable Energy}, 149, 1352–1359. \href{https://doi.org/10.1016/j.renene.2019.10.124}{https://doi.org/10.1016/j.renene.2019.10.124}
+
+\bibitem{Alam2022}
+Alam, M., Sultan, M. B., Mehnaz, M., Fahim, C. S. U., Hossain, S., \& Anik, A. H. (2022). Production of biogas from food waste in laboratory scale dry anaerobic digester under mesophilic condition. \textit{Energy Nexus}, 7, 100126. \href{https://doi.org/10.1016/j.nexus.2022.100126}{https://doi.org/10.1016/j.nexus.2022.100126}
+
+\bibitem{Wang2014}
+Wang, X., Lu, X., Li, F., \& Yang, G. (2014). Effects of temperature and carbon-nitrogen (C/N) ratio on the performance of anaerobic co-digestion of dairy manure, chicken manure and rice straw: Focusing on ammonia inhibition. \textit{PLoS ONE}, 9(5), e97265. \href{https://doi.org/10.1371/journal.pone.0097265}{https://doi.org/10.1371/journal.pone.0097265}
+
+\bibitem{Wang2012}
+Wang, X., Yang, G., Feng, Y., Ren, G., \& Han, X. (2012). Optimizing feeding composition and carbon–nitrogen ratios for improved methane yield during anaerobic co-digestion of dairy, chicken manure and wheat straw. \textit{Bioresource Technology}, 120, 78–83. \href{https://doi.org/10.1016/j.biortech.2012.06.058}{https://doi.org/10.1016/j.biortech.2012.06.058}
+
+\bibitem{Karthik2023}
+Karthik, C., Reddemma, S., Avinash, K. S., Sowjanya, P., Kumar, K. A., Nayak, M. V., \& Vamsi, T. (2023). Experimental study on production of biogas from kitchen waste. \textit{International Journal of Innovative Research in Engineering \& Management}, 10(1), 134–141. \href{https://doi.org/10.55524/ijirem.2023.10.1.24}{https://doi.org/10.55524/ijirem.2023.10.1.24}
+
+\bibitem{Phillip2024}
+Phillip, A., Bhatt, S. M., Sharma, N., \& Poudel, B. (2024). Enhanced biogas production using anaerobic co-digestion of animal waste and food waste: A review. \textit{Journal of Scientific Research and Reports}, 30(8), 761–781. \href{https://doi.org/10.9734/jsrr/2024/v30i82297}{https://doi.org/10.9734/jsrr/2024/v30i82297}
+
+\bibitem{Salangsang2022}
+Salangsang, M. C. D., Sekine, M., Akizuki, S., Sakai, H. D., Kurosawa, N., \& Toda, T. (2022). Effect of carbon to nitrogen ratio of food waste and short resting period on microbial accumulation during anaerobic digestion. \textit{Biomass and Bioenergy}, 162, 106481. \href{https://doi.org/10.1016/j.biombioe.2022.106481}{https://doi.org/10.1016/j.biombioe.2022.106481}
+
+\bibitem{Hunter2020}
+Hunter, B., \& Deshusses, M. A. (2020). Resources recovery from high-strength human waste anaerobic digestate using simple nitrification and denitrification filters. \textit{Science of the Total Environment}, 712, 135509. \href{https://doi.org/10.1016/j.scitotenv.2019.135509}{https://doi.org/10.1016/j.scitotenv.2019.135509}
+
+\bibitem{Jankovicova2022}
+Jankovičová, B., Hutňan, M., Nagy Czölderová, M., Hencelová, K., \& Imreová, Z. (2022). Comparison of acid and alkaline pre-treatment of lignocellulosic materials for biogas production. \textit{Plant, Soil and Environment}, 68(4), 195–204. \href{https://doi.org/10.17221/421/2021-PSE}{https://doi.org/10.17221/421/2021-PSE}
+
+\bibitem{Eduok2018}
+Eduok, S., John, O., Ita, B., Inyang, E., \& Coulon, F. (2018). Enhanced biogas production from anaerobic co-digestion of lignocellulosic biomass and poultry feces using source separated human urine as buffering agent. \textit{Frontiers in Environmental Science}, 6, 67. \href{https://doi.org/10.3389/fenvs.2018.00067}{https://doi.org/10.3389/fenvs.2018.00067}
+\end{thebibliography}
+\clearpage
+\thispagestyle{empty}
+\vspace*{7cm} % centers vertically on the page
+
+\begin{center}
+    {\Huge \textbf{Thank You}}
+\end{center}
+\end{document}
